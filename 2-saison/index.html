@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Arman Grigorian, piano — Saison 2026–2027</title>
+<meta name="description" content="Arman Grigorian, pianiste à Vevey et Lausanne : concerts de la saison, projets, enregistrements et contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Noto+Sans+Armenian:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --molasse:#E8DFD0;
+  --papier:#F5F0E8;
+  --vin:#5C1A2E;
+  --vin-clair:#7A2A40;
+  --encre:#241A17;
+  --encre-douce:#5A4B44;
+  --laiton:#9A7535;
+  --filet:#CFC3AE;
+  --cond:"Archivo", "Arial Narrow", sans-serif;
+  --serif:"Source Serif 4", Georgia, serif;
+  --gutter:clamp(16px, 4vw, 56px);
+  --max:1320px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--serif);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--laiton);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.cond{font-family:var(--cond);font-stretch:68%;font-weight:800;letter-spacing:-.01em;line-height:.92}
+h1,h2,h3{margin:0;font-family:var(--cond);font-stretch:70%;font-weight:800;color:var(--vin);line-height:.95;letter-spacing:-.01em}
+h2{font-size:clamp(2.6rem,6vw,4.8rem)}
+h3{font-size:clamp(1.5rem,2.4vw,2rem);font-stretch:75%;font-weight:700}
+p{margin:0 0 1em}
+.tag{display:inline-block;font-family:var(--cond);font-stretch:90%;font-weight:600;font-size:.72rem;line-height:1;color:var(--laiton);border:1px solid currentColor;border-radius:999px;padding:.28em .6em .32em;vertical-align:middle;white-space:nowrap}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--cond);font-stretch:85%;font-weight:700;font-size:1rem;text-decoration:none;padding:.7em 1.2em;border-radius:3px;border:2px solid var(--vin);background:var(--vin);color:var(--papier);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--vin-clair);border-color:var(--vin-clair)}
+.btn.ghost{background:transparent;color:var(--vin)}
+.btn.ghost:hover{background:var(--vin);color:var(--papier)}
+.btn.small{font-size:.9rem;padding:.45em .9em}
+
+/* en-tête */
+.top{position:sticky;top:0;z-index:50;background:var(--papier);border-bottom:1px solid var(--filet)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{font-family:var(--cond);font-stretch:70%;font-weight:800;font-size:1.45rem;color:var(--vin);text-decoration:none;white-space:nowrap}
+.brand small{font-weight:500;font-stretch:90%;font-size:.95rem;color:var(--encre-douce);margin-left:.35em}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{font-family:var(--cond);font-stretch:88%;font-weight:600;font-size:1rem;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--vin)}
+.lang{display:flex;gap:2px;font-family:var(--cond);font-stretch:90%;font-size:.85rem;font-weight:600}
+.lang span{padding:4px 7px;border-radius:3px;color:var(--encre-douce)}
+.lang .on{background:var(--vin);color:var(--papier)}
+.lang [aria-disabled]{opacity:.55;cursor:not-allowed}
+.lang [lang=hy]{font-family:"Noto Sans Armenian",sans-serif;font-stretch:100%}
+.burger{display:none;margin-left:auto;background:none;border:0;padding:10px;cursor:pointer;color:var(--vin)}
+.burger svg{display:block}
+@media (max-width:960px){
+  .burger{display:block}
+  .nav{position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:0;background:var(--papier);border-bottom:1px solid var(--filet);padding:8px var(--gutter) 20px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+  .nav.open{opacity:1;transform:none;visibility:visible}
+  .nav a{font-size:1.4rem;padding:12px 0;border-bottom:1px solid var(--filet)}
+  .lang{order:3;margin-left:auto}
+  .burger{order:4;margin-left:0}
+}
+@media (max-width:520px){
+  .top .wrap{gap:10px}
+  .brand small{display:none}
+  .lang span{padding:4px 5px}
+  .burger{padding:10px 0 10px 6px}
+}
+
+/* haut de page */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);background:var(--molasse);min-height:calc(100vh - 64px);max-height:980px}
+.hero-photo{position:relative;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 30%}
+.hero-photo figcaption{position:absolute;left:16px;bottom:14px;font-size:.78rem;color:#f5f0e8cc}
+.hero-panel{padding:clamp(28px,5vw,72px) var(--gutter);display:flex;flex-direction:column;justify-content:center}
+.hero-name{font-family:var(--cond);font-stretch:90%;font-weight:600;font-size:1.15rem;color:var(--encre);margin-bottom:.4em}
+.hero h1{font-size:clamp(3.6rem,9.4vw,9.2rem);line-height:.84;margin-bottom:.35em}
+.hero h1 span{display:block;color:var(--encre)}
+.next{list-style:none;margin:0 0 28px;padding:0;border-top:2px solid var(--vin)}
+.next li{display:grid;grid-template-columns:4.6rem 1fr;gap:16px;align-items:start;padding:14px 0;border-bottom:1px solid var(--filet)}
+.next .d{font-family:var(--cond);font-stretch:62%;font-weight:800;color:var(--vin);line-height:.85;text-align:left}
+.next .d b{display:block;font-size:3.2rem}
+.next .d i{font-style:normal;font-size:1rem;font-weight:600;font-stretch:80%}
+.next .t{font-family:var(--cond);font-stretch:80%;font-weight:700;font-size:1.25rem;line-height:1.15}
+.next .w{font-size:.95rem;color:var(--encre-douce)}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;max-height:none;min-height:0}
+  .hero-photo{height:62vh;min-height:340px;max-height:560px}
+  .hero-photo img{object-position:40% 25%}
+}
+
+/* sections */
+section{padding:clamp(64px,9vw,128px) 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 32px;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head p{max-width:34em;margin:0;color:var(--encre-douce)}
+
+/* agenda */
+#concerts{background:var(--papier)}
+.summary{font-family:var(--cond);font-stretch:85%;font-weight:600;font-size:1.15rem;color:var(--encre)}
+.tabs{display:inline-flex;border:2px solid var(--vin);border-radius:4px;overflow:hidden;margin-bottom:36px}
+.tabs button{font-family:var(--cond);font-stretch:85%;font-weight:700;font-size:1rem;background:transparent;color:var(--vin);border:0;padding:.6em 1.2em;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--vin);color:var(--papier)}
+.month{font-family:var(--cond);font-stretch:75%;font-weight:700;font-size:1.35rem;color:var(--laiton);margin:40px 0 0;padding-bottom:8px;border-bottom:2px solid var(--encre)}
+.month:first-child{margin-top:0}
+.gig{display:grid;grid-template-columns:7rem minmax(0,1fr) auto;gap:8px 28px;align-items:center;padding:22px 0;border-bottom:1px solid var(--filet)}
+.gig .day{font-family:var(--cond);font-stretch:62%;font-weight:800;color:var(--vin);line-height:.8}
+.gig .day b{display:block;font-size:4.6rem}
+.gig .day i{display:block;font-style:normal;font-weight:600;font-stretch:85%;font-size:.95rem;color:var(--encre-douce);margin-top:6px}
+.gig h3{color:var(--encre);font-size:clamp(1.35rem,2.2vw,1.75rem);margin-bottom:6px}
+.gig .meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.98rem;color:var(--encre-douce)}
+.gig .meta strong{font-weight:600;color:var(--encre)}
+.gig .acts{display:flex;gap:10px}
+.gig.past .day b{color:var(--encre-douce)}
+.gig.past h3{color:var(--encre-douce)}
+[hidden]{display:none!important}
+@media (max-width:760px){
+  .gig{grid-template-columns:5.6rem minmax(0,1fr);gap:6px 14px;align-items:start}
+  .gig .day b{font-size:3.4rem}
+  .gig .day i{font-size:.8rem;line-height:1.25}
+  .gig .acts{grid-column:2}
+}
+
+/* biographie */
+#biographie{background:var(--molasse)}
+.bio{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.bio figure{margin:0;position:sticky;top:96px}
+.bio figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.credit{font-size:.78rem;color:var(--encre-douce);margin-top:8px}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.3;color:var(--vin);margin:0 0 1.2em;max-width:26em}
+.quote cite{display:block;font-style:normal;font-family:var(--cond);font-stretch:85%;font-weight:600;font-size:1rem;color:var(--encre-douce);margin-top:.6em}
+.bio-cols{columns:2 19rem;column-gap:44px}
+.bio-cols p{break-inside:avoid-column}
+.facts{margin:36px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:0 36px;border-top:2px solid var(--vin)}
+.facts div{padding:14px 0;border-bottom:1px solid var(--filet)}
+.facts dt{font-family:var(--cond);font-stretch:80%;font-weight:700;font-size:1.05rem;color:var(--vin)}
+.facts dd{margin:0;font-size:.98rem}
+@media (max-width:820px){.bio{grid-template-columns:1fr}.bio figure{position:static;max-width:440px}}
+
+/* projets */
+.feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:center;margin-bottom:clamp(48px,6vw,88px)}
+.feature img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.feature h3{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:.35em}
+.kicker{font-family:var(--cond);font-stretch:85%;font-weight:600;color:var(--laiton);font-size:1.05rem;margin-bottom:.5em}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);margin-bottom:clamp(48px,6vw,88px)}
+.pair article img{width:100%;aspect-ratio:5/4;object-fit:cover;margin-bottom:18px}
+.pair h3{margin-bottom:.35em}
+.recital{background:var(--vin);color:var(--papier);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0}
+.recital img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.recital-body{padding:clamp(28px,4vw,56px)}
+.recital h3{color:var(--papier);font-size:clamp(2rem,4vw,3.2rem);margin-bottom:.3em}
+.recital .kicker{color:#E2C48A}
+.prog{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid #ffffff40}
+.prog li{display:grid;grid-template-columns:8.5rem 1fr;gap:12px;padding:9px 0;border-bottom:1px solid #ffffff26;font-size:.98rem}
+.prog b{font-family:var(--cond);font-stretch:80%;font-weight:700;font-size:1.05rem}
+.smallrow{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(24px,4vw,56px);align-items:center}
+.smallrow img{width:100%;aspect-ratio:5/4;object-fit:cover}
+@media (max-width:820px){
+  .feature,.pair,.recital,.smallrow{grid-template-columns:1fr}
+  .recital img{min-height:0;aspect-ratio:4/3;height:auto}
+  .prog li{grid-template-columns:1fr;gap:0}
+}
+
+/* actualités */
+#actualites{background:var(--molasse)}
+.news{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,40px)}
+.news article{display:flex;flex-direction:column}
+.news img{width:100%;object-fit:cover;aspect-ratio:4/3;margin-bottom:14px}
+.news article:first-child img{aspect-ratio:3/2}
+.news time{font-family:var(--cond);font-stretch:85%;font-weight:600;color:var(--laiton);font-size:.98rem}
+.news h3{color:var(--encre);margin:.2em 0 .4em;font-size:clamp(1.3rem,2vw,1.6rem)}
+.news article:first-child h3{font-size:clamp(1.6rem,3vw,2.3rem);color:var(--vin)}
+.news p{font-size:.98rem}
+@media (max-width:900px){.news{grid-template-columns:1fr 1fr}.news article:first-child{grid-column:1/-1}}
+@media (max-width:560px){.news{grid-template-columns:1fr}}
+
+/* écouter */
+.listen{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,4vw,56px);align-items:start}
+.video{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.video button{all:unset;position:absolute;inset:0;cursor:pointer;display:block}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.88;transform:scale(1.34)}
+.video img.own{transform:none;opacity:.8}
+.video .play{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--vin);display:grid;place-items:center;transition:transform .2s}
+.video button:hover .play{transform:scale(1.06)}
+.video button:focus-visible{outline:3px solid var(--laiton);outline-offset:-3px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcap{font-size:.95rem;color:var(--encre-douce);margin-top:10px}
+.vlist{margin-top:22px;display:grid;grid-template-columns:10rem 1fr;gap:16px;align-items:center}
+.vlist .video{aspect-ratio:16/9}
+.vlist .play{width:44px;height:44px;margin:-22px 0 0 -22px}
+.disc{display:grid;grid-template-columns:7rem 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--filet)}
+.disc:first-of-type{border-top:2px solid var(--vin)}
+.disc img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.disc .ph{aspect-ratio:1/1;background:var(--molasse);display:grid;place-items:center;font-family:var(--cond);font-stretch:70%;font-weight:800;color:var(--vin);font-size:1.6rem;line-height:.9;text-align:center;padding:8px}
+.disc h3{color:var(--encre);font-size:1.3rem;margin-bottom:4px}
+.disc p{font-size:.95rem;margin:0 0 6px;color:var(--encre-douce)}
+.disc a{font-family:var(--cond);font-stretch:85%;font-weight:700;color:var(--vin)}
+@media (max-width:900px){.listen{grid-template-columns:1fr}}
+@media (max-width:420px){.vlist{grid-template-columns:1fr}}
+
+/* contact */
+#contact{background:var(--encre);color:var(--papier)}
+#contact h2{color:var(--papier)}
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px)}
+.contact p{color:#e9dfcfcc;max-width:30em}
+.social{list-style:none;padding:0;margin:28px 0 0}
+.social li{border-top:1px solid #ffffff2a}
+.social li:last-child{border-bottom:1px solid #ffffff2a}
+.social a{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-family:var(--cond);font-stretch:80%;font-weight:700;font-size:1.4rem;text-decoration:none}
+.social a span{font-family:var(--serif);font-weight:400;font-size:.95rem;color:#e9dfcf99}
+.social a:hover{color:#E2C48A}
+form{display:grid;gap:16px}
+label{display:block;font-family:var(--cond);font-stretch:85%;font-weight:600;font-size:1rem;margin-bottom:6px}
+input,textarea{width:100%;font:inherit;font-size:1rem;color:var(--encre);background:var(--papier);border:2px solid transparent;border-radius:3px;padding:12px 14px}
+input:focus,textarea:focus{outline:none;border-color:#E2C48A}
+textarea{min-height:150px;resize:vertical}
+#contact .btn{background:#E2C48A;border-color:#E2C48A;color:var(--encre);justify-self:start}
+#contact .btn:hover{background:var(--papier);border-color:var(--papier)}
+.notice{min-height:1.6em;font-size:1rem;color:#E2C48A;margin:0}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+
+/* pied de page */
+footer{background:var(--encre);color:#e9dfcf99;font-size:.85rem;padding:28px 0 96px;border-top:1px solid #ffffff1f}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
+footer p{margin:0;max-width:60em}
+
+/* bandeau maquette */
+.mock{position:fixed;left:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:12px;background:var(--papier);color:var(--encre);border:1px solid var(--filet);box-shadow:0 6px 24px #241a1726;border-radius:999px;padding:7px 8px 7px 16px;font-family:var(--cond);font-stretch:88%;font-size:.9rem;font-weight:600;max-width:calc(100vw - 24px)}
+.mock a{background:var(--vin);color:var(--papier);text-decoration:none;border-radius:999px;padding:5px 12px;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil">Arman Grigorian<small>piano</small></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#concerts">Concerts</a>
+      <a href="#biographie">Biographie</a>
+      <a href="#projets">Projets</a>
+      <a href="#actualites">Actualités</a>
+      <a href="#ecouter">Écouter</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang" aria-label="Langue">
+      <span class="on" aria-current="true">FR</span>
+      <span aria-disabled="true" title="Bientôt disponible">EN</span>
+      <span aria-disabled="true" title="Bientôt disponible" lang="hy">ՀԱՅ</span>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M0 2h26M0 10h26M0 18h26" stroke="currentColor" stroke-width="2.5"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil" style="padding:0">
+  <figure class="hero-photo" style="margin:0">
+    <img src="../assets/img/au-piano.webp" width="1280" height="1600" alt="Arman Grigorian de profil, jouant sur un piano à queue devant un mur en bois clair" fetchpriority="high">
+    <figcaption>Photo Clément Lambla</figcaption>
+  </figure>
+  <div class="hero-panel">
+    <p class="hero-name">Arman Grigorian, pianiste</p>
+    <h1>Saison <span>2026–2027</span></h1>
+    <ul class="next" aria-label="Prochains concerts">
+      <li><div class="d"><b>11</b><i>déc.</i></div><div><div class="t">Cloches : harmonies célestes <span class="tag">exemple</span></div><div class="w">Récital, Temple de Lutry</div></div></li>
+      <li><div class="d"><b>24</b><i>janv.</i></div><div><div class="t">Carnets lyriques <span class="tag">exemple</span></div><div class="w">Avec Narek Hekekyan, Vevey</div></div></li>
+      <li><div class="d"><b>20</b><i>févr.</i></div><div><div class="t">Liszt et Pétrarque <span class="tag">exemple</span></div><div class="w">Avec Tristan Blanchet, Lausanne</div></div></li>
+    </ul>
+    <div><a class="btn" href="#concerts">Voir tous les concerts</a></div>
+  </div>
+</section>
+
+<section id="concerts">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>Concerts</h2>
+      </div>
+      <p class="summary">5 concerts cette saison, de Lutry à Sion <span class="tag">exemple</span></p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Période">
+      <button role="tab" id="t-avenir" aria-selected="true" aria-controls="p-avenir">À venir</button>
+      <button role="tab" id="t-passes" aria-selected="false" aria-controls="p-passes" tabindex="-1">Passés</button>
+    </div>
+
+    <div id="p-avenir" role="tabpanel" aria-labelledby="t-avenir">
+      <h3 class="month">Décembre 2026</h3>
+      <article class="gig">
+        <div class="day"><b>11</b><i>vendredi, 20 h</i></div>
+        <div><h3>Cloches : harmonies célestes <span class="tag">exemple</span></h3>
+          <div class="meta"><span><strong>Temple de Lutry</strong>, Lutry</span><span>Récital : Liszt, Debussy, Messiaen, Ravel</span></div></div>
+        <div class="acts"><a class="btn small ghost" href="#">Détails</a><a class="btn small" href="#">Réserver</a></div>
+      </article>
+      <h3 class="month">Janvier 2027</h3>
+      <article class="gig">
+        <div class="day"><b>24</b><i>dimanche, 17 h</i></div>
+        <div><h3>Carnets lyriques <span class="tag">exemple</span></h3>
+          <div class="meta"><span><strong>Salle del Castillo</strong>, Vevey</span><span>Avec Narek Hekekyan, violoncelle</span></div></div>
+        <div class="acts"><a class="btn small ghost" href="#">Détails</a><a class="btn small" href="#">Réserver</a></div>
+      </article>
+      <h3 class="month">Février 2027</h3>
+      <article class="gig">
+        <div class="day"><b>20</b><i>samedi, 19 h 30</i></div>
+        <div><h3>Liszt et Pétrarque <span class="tag">exemple</span></h3>
+          <div class="meta"><span><strong>Salle Paderewski</strong>, Lausanne</span><span>Avec Tristan Blanchet, ténor</span></div></div>
+        <div class="acts"><a class="btn small ghost" href="#">Détails</a><a class="btn small" href="#">Réserver</a></div>
+      </article>
+      <h3 class="month">Mars 2027</h3>
+      <article class="gig">
+        <div class="day"><b>21</b><i>dimanche, 17 h</i></div>
+        <div><h3>Un voyage baroque <span class="tag">exemple</span></h3>
+          <div class="meta"><span><strong>Église Saint-Martin</strong>, Vevey</span><span>La Folia d'Allegria, épinette</span></div></div>
+        <div class="acts"><a class="btn small ghost" href="#">Détails</a><a class="btn small" href="#">Réserver</a></div>
+      </article>
+      <h3 class="month">Mai 2027</h3>
+      <article class="gig">
+        <div class="day"><b>8</b><i>samedi, 18 h</i></div>
+        <div><h3>Schubert au pianoforte de 1827 <span class="tag">exemple</span></h3>
+          <div class="meta"><span><strong>Maison de Wolff</strong>, Sion</span><span>Sur le Schrimpf, Vienne 1827</span></div></div>
+        <div class="acts"><a class="btn small ghost" href="#">Détails</a><a class="btn small" href="#">Réserver</a></div>
+      </article>
+    </div>
+
+    <div id="p-passes" role="tabpanel" aria-labelledby="t-passes" hidden>
+      <h3 class="month">Octobre 2026</h3>
+      <article class="gig past">
+        <div class="day"><b>25</b><i>dimanche, 17 h</i></div>
+        <div><h3>La Folia d'Allegria</h3>
+          <div class="meta"><span><strong>Église romane</strong>, Saint-Sulpice</span><span>Concerts Musique et Parole</span></div></div>
+      </article>
+      <h3 class="month">Avril 2026</h3>
+      <article class="gig past">
+        <div class="day"><b>26</b><i>dimanche, 17 h 30</i></div>
+        <div><h3>La Folia d'Allegria</h3>
+          <div class="meta"><span><strong>Église de Saint-Saphorin</strong></span><span>Monteverdi, Storace, Falconieri, Sanz, Charpentier</span></div></div>
+      </article>
+      <article class="gig past">
+        <div class="day"><b>10</b><i>vendredi, 16 h 30</i></div>
+        <div><h3>Duo avec Rachel Kolly</h3>
+          <div class="meta"><span><strong>Maison de la Femme</strong>, Lausanne</span><span>Clara Schumann, Mel Bonis, Nadia Boulanger</span></div></div>
+      </article>
+      <h3 class="month">Mars 2026</h3>
+      <article class="gig past">
+        <div class="day"><b>1<sup style="font-size:.4em">er</sup></b><i>dimanche, 11 h</i></div>
+        <div><h3>Liszt, Sonnets de Pétrarque</h3>
+          <div class="meta"><span><strong>Hôtel de ville</strong>, Belfort</span><span>Avec Tristan Blanchet, Vocalises de Belfort</span></div></div>
+      </article>
+      <article class="gig past">
+        <div class="day"><b>Mars</b><i>2026</i></div>
+        <div><h3>Carnets lyriques, premier concert</h3>
+          <div class="meta"><span><strong>La Goulue</strong>, St-Légier</span><span>Avec Narek Hekekyan, violoncelle</span></div></div>
+      </article>
+      <h3 class="month">Décembre 2025</h3>
+      <article class="gig past">
+        <div class="day"><b>5</b><i>vendredi, 20 h</i></div>
+        <div><h3>La Folia d'Allegria</h3>
+          <div class="meta"><span><strong>Caveau de Paudex</strong>, Paudex</span><span>Musique baroque d'Espagne, de France et d'Italie</span></div></div>
+      </article>
+      <article class="gig past">
+        <div class="day"><b>Déc.</b><i>2025</i></div>
+        <div><h3>Concert de Noël avec Rachel Kolly</h3>
+          <div class="meta"><span><strong>Hôtel Engadinerhof</strong>, Pontresina</span><span>Violon et piano</span></div></div>
+      </article>
+      <h3 class="month">Septembre 2025</h3>
+      <article class="gig past">
+        <div class="day"><b>Sept.</b><i>2025</i></div>
+        <div><h3>La Folia d'Allegria</h3>
+          <div class="meta"><span><strong>Château de la Rive</strong>, Lutry</span><span>Concerts du Cœur</span></div></div>
+      </article>
+      <h3 class="month">Juillet 2025</h3>
+      <article class="gig past">
+        <div class="day"><b>19</b><i>samedi, 17 h</i></div>
+        <div><h3>Alpenjäger</h3>
+          <div class="meta"><span><strong>Château Stockalper</strong>, Brigue</span><span>Avec Tristan Blanchet, Rhonefestival</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="biographie">
+  <div class="wrap bio">
+    <figure>
+      <img src="../assets/img/portrait-studio-2.webp" width="1280" height="1600" loading="lazy" alt="Portrait d'Arman Grigorian, la main sur le front, en veste bordeaux">
+      <figcaption class="credit">Photo Studio Archetype</figcaption>
+    </figure>
+    <div>
+      <h2 style="margin-bottom:.5em">Biographie</h2>
+      <blockquote class="quote">« Le concert, cet espace de privilège entre un artiste et son public où l'on peut exprimer l'ineffable. »<cite>Arman Grigorian</cite></blockquote>
+      <div class="bio-cols">
+        <p>Né en Arménie dans une famille de musiciens, Arman Grigorian grandit au son de la musique traditionnelle arménienne et commence le piano à huit ans. Il s'installe ensuite en France.</p>
+        <p>Au Conservatoire de Strasbourg, il obtient son diplôme d'études musicales de piano et un prix de musique de chambre, dans les classes de Lara Erbès et Aline Zylberach, tout en suivant une licence d'anglais à l'université.</p>
+        <p>Il rejoint en 2011 la classe de Pierre Goy à la Haute École de Musique de Lausanne, où il obtient un Bachelor puis un Master de pédagogie, et découvre les claviers historiques. Un Master d'interprétation à la Haute école des arts de Berne, auprès de Patricia Pagny, complète sa formation.</p>
+        <p>Il a travaillé avec Leon Fleisher, Abdel Rahman El-Bacha, François-René Duchâble et Janina Fialkowska, et s'est formé à l'interprétation historique avec Edoardo Torbianelli, Piet Kuijken et Clive Brown. Il est lauréat de la Fondation Royaumont depuis 2019.</p>
+        <p>Liszt, Clara et Robert Schumann, Schubert et Ravel sont au cœur de son répertoire. Il joue aussi le pianoforte et l'épinette, et accompagne volontiers la voix, dans le lied comme dans la mélodie.</p>
+        <p>Il enseigne le piano au Conservatoire de Montreux-Vevey-Riviera et s'occupe de la communication des Rencontres harmoniques de Lausanne, festival consacré aux pianos historiques.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Festivals</dt><dd>Rencontres musicales d'Évian, Cully Classique, FIMU de Belfort, Festival de piano de Genève, Schubertiade de Sion, Riviera Classic</dd></div>
+        <div><dt>Avec orchestre</dt><dd>3<sup>e</sup> concerto de Beethoven (2018)</dd></div>
+        <div><dt>Enseignement</dt><dd>Conservatoire de Montreux-Vevey-Riviera, site de Vevey</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="projets">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Projets</h2>
+      <p>Quatre formations et un récital, du baroque espagnol au lied romantique.</p>
+    </div>
+
+    <article class="feature">
+      <img src="../assets/img/duo-blanchet-nb.webp" width="984" height="984" loading="lazy" alt="Arman Grigorian et le ténor Tristan Blanchet, en gilet, photo noir et blanc">
+      <div>
+        <p class="kicker">Piano et ténor</p>
+        <h3>Avec Tristan Blanchet</h3>
+        <p>Un duo de longue date autour de Liszt et du lied : les Sonnets de Pétrarque, les programmes « Nostalgies alpestres » et « Alpenjäger » avec Beethoven, Schubert et Liszt, et le concert-lecture « Proust au salon » avec le comédien Cyprien Colombo, sur des musiques de Wagner, Reynaldo Hahn, Fauré et Chopin.</p>
+        <p class="credit">Photo Rhonefestival</p>
+      </div>
+    </article>
+
+    <div class="pair">
+      <article>
+        <img src="../assets/img/carnets-lyriques.webp" width="1200" height="960" loading="lazy" alt="Le violoncelliste Narek Hekekyan en concert, Arman Grigorian au piano en arrière-plan">
+        <p class="kicker">Violoncelle et piano</p>
+        <h3>Carnets lyriques</h3>
+        <p>Avec le violoncelliste Narek Hekekyan, un programme qui mêle des musiques d'Arménie, de Russie, de France et d'Espagne. Premier concert en mars 2026 à La Goulue, à St-Légier.</p>
+        <p class="credit">Photo Anna Apresyan</p>
+      </article>
+      <article>
+        <img src="../assets/img/folia-groupe.webp" width="1200" height="904" loading="lazy" alt="Les musiciens de La Folia d'Allegria après un concert">
+        <p class="kicker">Ensemble baroque</p>
+        <h3>La Folia d'Allegria</h3>
+        <p>Sofia Rauss, soprano ; Albanie Bauer, flûte à bec ; Jordan Gregoris, violoncelle baroque ; Antony Corbière, archiluth et guitare baroque ; Arman Grigorian à l'épinette. Musique d'Espagne, de France et d'Italie du XVII<sup>e</sup> siècle.</p>
+        <p class="credit">Photo J.-P. Iracane</p>
+      </article>
+    </div>
+
+    <article class="recital">
+      <img src="../assets/img/cloche.webp" width="960" height="1200" loading="lazy" alt="Cloche ancienne en bronze, éclairage chaud">
+      <div class="recital-body">
+        <p class="kicker">Récital, environ 50 minutes</p>
+        <h3>Cloches : harmonies célestes</h3>
+        <p>L'héritage mystique de Liszt, des cloches de Genève à la cathédrale engloutie.</p>
+        <ul class="prog">
+          <li><b>Franz Liszt</b><span>La chapelle de Guillaume Tell ; Funérailles ; Les cloches de Genève</span></li>
+          <li><b>Claude Debussy</b><span>La cathédrale engloutie</span></li>
+          <li><b>Olivier Messiaen</b><span>Cloches d'angoisse et larmes d'adieu</span></li>
+          <li><b>Tristan Murail</b><span>Cloches d'adieu, et un sourire</span></li>
+          <li><b>Sergueï Rachmaninov</b><span>Prélude en ut dièse mineur op. 3 no 2</span></li>
+          <li><b>Maurice Ravel</b><span>La vallée des cloches</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="smallrow">
+      <img src="../assets/img/duo-kolly.webp" width="1200" height="960" loading="lazy" alt="La violoniste Rachel Kolly en concert avec Arman Grigorian au piano">
+      <div>
+        <p class="kicker">Violon et piano</p>
+        <h3>Avec Rachel Kolly</h3>
+        <p>Un duo consacré aux compositrices : Clara Schumann, Mel Bonis, Nadia Boulanger.</p>
+        <p class="credit">Photo milesfp</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="actualites">
+  <div class="wrap">
+    <div class="sec-head"><h2>Actualités</h2></div>
+    <div class="news">
+      <article>
+        <img src="../assets/img/schrimpf-jeu.webp" width="900" height="1200" loading="lazy" alt="Arman Grigorian joue un pianoforte ancien dans l'atelier du restaurateur">
+        <time datetime="2025-11">Novembre 2025</time>
+        <h3>Un pianoforte de 1827 arrive</h3>
+        <p>Un instrument de Joseph Schrimpf, Vienne 1827, restauré par Christopher Clarke. Cinq pédales, dont celle « des janissaires », qui intrigue toujours le public.</p>
+      </article>
+      <article>
+        <img src="../assets/img/carnets-lyriques-duo.webp" width="1200" height="1200" loading="lazy" alt="Arman Grigorian et Narek Hekekyan côte à côte, le violoncelle à la main">
+        <time datetime="2026-06">Juin 2026</time>
+        <h3>Retour sur les Carnets lyriques</h3>
+        <p>Premier concert du duo avec Narek Hekekyan, dans l'ambiance d'un salon du XIX<sup>e</sup> siècle.</p>
+      </article>
+      <article>
+        <img src="../assets/img/salle-vevey.webp" width="1200" height="1200" loading="lazy" alt="Salle de concert avec un piano à queue et des rangées de chaises">
+        <time datetime="2025-08">Août 2025</time>
+        <h3>Rentrée au conservatoire</h3>
+        <p>Le plaisir de retrouver les élèves à Vevey après la pause d'été, et de découvrir de nouveaux visages.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="ecouter">
+  <div class="wrap">
+    <div class="sec-head"><h2>Écouter</h2></div>
+    <div class="listen">
+      <div>
+        <div class="video" data-id="dUF9ZdvejlY" data-title="Clara Schumann, Variations op. 20">
+          <button type="button" aria-label="Lire la vidéo : Clara Schumann, Variations op. 20">
+            <img class="own" src="../assets/img/clavier-broadwood.webp" width="1200" height="930" loading="lazy" alt="">
+            <span class="play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#F5F0E8"/></svg></span>
+          </button>
+        </div>
+        <p class="vcap">Clara Schumann, Variations sur un thème de Robert Schumann op. 20. Vidéo Karin Antonietti.</p>
+        <div class="vlist">
+          <div class="video" data-id="PsLQmuhC5u8" data-title="Le piano ravélien">
+            <button type="button" aria-label="Lire la vidéo : Le piano ravélien, un apprentissage par la copie">
+              <img src="https://i.ytimg.com/vi/PsLQmuhC5u8/hqdefault.jpg" width="480" height="360" loading="lazy" alt="">
+              <span class="play"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#F5F0E8"/></svg></span>
+            </button>
+          </div>
+          <p class="vcap" style="margin:0">Le piano ravélien : un apprentissage par la copie. Projet de recherche, HEM Genève.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:14px">Disques</h3>
+        <div class="disc">
+          <img src="../assets/img/cd-clara-schumann.webp" width="1026" height="1026" loading="lazy" alt="Pochette du disque Clara Schumann, Leidenschaft und Hingabe">
+          <div><h3>Clara Schumann : Leidenschaft &amp; Hingabe</h3><p>2020, Tasti'Era Projects. Variations op. 20.</p><a href="https://tastieraprojects.com/discography/leidenschaft-hingabe/">Écouter sur Tasti'Era</a></div>
+        </div>
+        <div class="disc">
+          <div class="ph" aria-hidden="true">Viva piano viva forte</div>
+          <div><h3>Viva piano, viva forte</h3><p>2017, Tasti'Era Projects. Ravel, Oiseaux tristes.</p><a href="https://tastieraprojects.com/discography/viva-piano-viva-forte/">Écouter sur Tasti'Era</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2 style="margin-bottom:.4em">Contact</h2>
+      <p>Pour un concert, un festival, une collaboration ou des cours de piano, écrivez à Arman Grigorian. Il vous répondra personnellement.</p>
+      <ul class="social">
+        <li><a href="https://www.instagram.com/arman.grigorian.pianist/">Instagram <span>arman.grigorian.pianist</span></a></li>
+        <li><a href="https://www.facebook.com/Arman.Grigorian.Pianist">Facebook <span>Arman Grigorian Pianist</span></a></li>
+        <li><a href="https://www.youtube.com/user/armpiano">YouTube <span>armpiano</span></a></li>
+      </ul>
+    </div>
+    <form id="form" novalidate>
+      <div><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name"></div>
+      <div><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
+      <div><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
+      <button class="btn" type="submit">Envoyer le message</button>
+      <p class="notice" id="notice" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Photos : Clément Lambla, Studio Archetype, Rhonefestival, Anna Apresyan, J.-P. Iracane, milesfp, Arman Grigorian. Pochette : Tasti'Era Projects.</p>
+    <p>Maquette de démonstration. Les éléments marqués « exemple » sont fictifs.</p>
+  </div>
+</footer>
+
+<div class="mock" role="note">Maquette 2 sur 3 <a href="../">Voir les 3 maquettes</a></div>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(t)});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var k=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];sel(k);k.focus();}});
+  });
+
+  document.querySelectorAll('.video').forEach(function(v){
+    v.querySelector('button').addEventListener('click',function(){
+      if(v.dataset.id==='dUF9ZdvejlY'){window.open('https://www.youtube.com/watch?v=dUF9ZdvejlY','_blank','noopener');return;}
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+v.dataset.id+'?autoplay=1';
+      f.title=v.dataset.title;f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;
+      v.innerHTML='';v.appendChild(f);
+    });
+  });
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('notice').textContent="Démonstration : ce message n'a pas été envoyé.";
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Arman Grigorian, maquettes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Archivo:wdth,wght@62..100,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,400&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+  :root{--fond:#F3F3F1;--encre:#1E2024;--doux:#5F6368;--filet:#D8D9D6}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fond);color:var(--encre);font:400 17px/1.55 "Albert Sans",system-ui,sans-serif}
+  a{color:inherit}
+  :focus-visible{outline:2px solid #2F5D8A;outline-offset:3px}
+  header{max-width:1180px;margin:0 auto;padding:56px 20px 28px}
+  h1{font:500 clamp(32px,5vw,52px)/1.1 "Albert Sans",sans-serif;letter-spacing:-.02em;margin:0 0 14px}
+  header p{max-width:60ch;margin:0;color:var(--doux)}
+  main{max-width:1180px;margin:0 auto;padding:12px 20px 64px;display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .m{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--filet)}
+  .m:hover .vue img{transform:scale(1.02)}
+  .vue{aspect-ratio:4/5;overflow:hidden;position:relative}
+  .vue img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+  .vue span{position:absolute;left:18px;right:18px;bottom:16px;font-size:clamp(30px,3.4vw,40px);line-height:1.02}
+  .m1 .vue span{font-family:"Bodoni Moda",serif;color:#1B1D21;background:#FAFAF8;left:0;right:auto;bottom:0;padding:14px 22px 10px 18px}
+  .m1 .vue{background:#FAFAF8}
+  .m1 .vue img{object-position:60% 20%}
+  .m2 .vue span{font-family:Archivo,sans-serif;font-stretch:65%;font-weight:700;color:#F5F0E8;text-shadow:0 1px 14px rgba(36,26,23,.5)}
+  .m3 .vue span{font-family:Marcellus,serif;color:#EDE6D6}
+  .txt{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .txt h2{margin:0;font-size:21px;font-weight:600}
+  .txt p{margin:0;color:var(--doux);font-size:16px}
+  .nuancier{display:flex;gap:6px;margin-top:auto;padding-top:10px}
+  .nuancier i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+  .ouvrir{margin-top:12px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+  footer{max-width:1180px;margin:0 auto;padding:0 20px 48px;color:var(--doux);font-size:14px}
+  footer p{max-width:70ch}
+  @media (prefers-reduced-motion:reduce){.vue img{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Trois propositions de site pour Arman Grigorian</h1>
+  <p>Chaque maquette s'ouvre sur une seule page, sur ordinateur comme sur téléphone. Les textes viennent de son parcours réel ; ce qui est inventé, comme les concerts à venir, porte la mention « exemple ».</p>
+</header>
+<main>
+  <a class="m m1" href="1-epure/">
+    <div class="vue"><img src="assets/img/portrait-studio.webp" alt="" width="1280" height="1600"><span>Arman<br>Grigorian</span></div>
+    <div class="txt">
+      <h2>1. Épuré</h2>
+      <p>Dans l'esprit du site de Jean-Christophe Dijoux : beaucoup de blanc, le nom composé comme la page de titre d'une partition, le portrait en grand.</p>
+      <div class="nuancier" aria-hidden="true"><i style="background:#FAFAF8"></i><i style="background:#1B1D21"></i><i style="background:#5B7488"></i><i style="background:#C9801F"></i></div>
+      <span class="ouvrir">Ouvrir la maquette 1</span>
+    </div>
+  </a>
+  <a class="m m2" href="2-saison/">
+    <div class="vue"><img src="assets/img/au-piano.webp" alt="" width="1280" height="1600"><span>Saison<br>2026–2027</span></div>
+    <div class="txt">
+      <h2>2. Saison</h2>
+      <p>Dans l'esprit des Musiciens du Louvre : les concerts d'abord, classés par mois, avec boutons pour réserver ; tons pierre et bordeaux.</p>
+      <div class="nuancier" aria-hidden="true"><i style="background:#E8DFD0"></i><i style="background:#5C1A2E"></i><i style="background:#241A17"></i><i style="background:#9A7535"></i></div>
+      <span class="ouvrir">Ouvrir la maquette 2</span>
+    </div>
+  </a>
+  <a class="m m3" href="3-nuit/">
+    <div class="vue" style="background:#121A2E"><img src="assets/img/mains-partition.webp" alt="" width="1440" height="1152" style="object-position:70% 50%"><span>Scène<br>de nuit</span></div>
+    <div class="txt">
+      <h2>3. Scène de nuit</h2>
+      <p>Une direction nouvelle : fond bleu nuit, les lumières de scène qui s'allument à l'ouverture, une touche arménienne discrète.</p>
+      <div class="nuancier" aria-hidden="true"><i style="background:#121A2E"></i><i style="background:#EDE6D6"></i><i style="background:#C8A15A"></i><i style="background:#8E2A36"></i></div>
+      <span class="ouvrir">Ouvrir la maquette 3</span>
+    </div>
+  </a>
+</main>
+<footer>
+  <p>Maquettes de travail, non référencées sur les moteurs de recherche. Photos issues des comptes d'Arman Grigorian ; crédits en bas de chaque maquette.</p>
+</footer>
+</body>
+</html>

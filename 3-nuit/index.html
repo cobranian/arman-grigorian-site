@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Arman Grigorian, piano — Scène de nuit</title>
+<meta name="description" content="Arman Grigorian, pianiste à Vevey et Lausanne. Maquette 3 : Scène de nuit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600&family=Noto+Serif+Armenian:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../assets/img/mains-partition.webp">
+<style>
+@property --r { syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+
+:root {
+  --night: #121A2E;
+  --curtain: #1B2542;
+  --curtain-2: #232F52;
+  --ivory: #EDE6D6;
+  --ivory-soft: #C4BEB0;
+  --gold: #C8A15A;
+  --gold-soft: rgba(200, 161, 90, .38);
+  --pom: #8E2A36;
+  --display: 'Marcellus', 'Times New Roman', serif;
+  --text: 'Manrope', system-ui, sans-serif;
+  --arm: 'Noto Serif Armenian', serif;
+  --gutter: clamp(1rem, 5vw, 4.5rem);
+  --max: 1240px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--ivory);
+  font: 400 1.0625rem/1.65 var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.skip { position: absolute; left: -999px; top: 0; background: var(--gold); color: var(--night); padding: .5rem 1rem; z-index: 100; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.1; margin: 0; letter-spacing: .01em; }
+h2 { font-size: clamp(2rem, 4.4vw, 3.4rem); }
+h3 { font-size: clamp(1.35rem, 2vw, 1.7rem); }
+p { margin: 0 0 1em; }
+
+.tag {
+  display: inline-block;
+  font: 500 .72rem/1 var(--text);
+  letter-spacing: .04em;
+  color: var(--gold);
+  border: 1px solid var(--gold-soft);
+  border-radius: 99px;
+  padding: .28em .7em .32em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* ---------- header ---------- */
+.top {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .9rem var(--gutter);
+  transition: background .3s;
+}
+.top.scrolled { background: rgba(18, 26, 46, .96); }
+.brand { font-family: var(--display); font-size: 1.15rem; text-decoration: none; white-space: nowrap; }
+.nav { display: flex; align-items: center; gap: 1.6rem; }
+.nav ul { list-style: none; display: flex; gap: 1.4rem; margin: 0; padding: 0; }
+.nav a { text-decoration: none; font-size: .92rem; color: var(--ivory-soft); }
+.nav a:hover { color: var(--ivory); }
+.lang { display: flex; gap: .15rem; font-size: .8rem; }
+.lang span { padding: .2rem .45rem; border-radius: 3px; color: var(--ivory-soft); opacity: .55; cursor: not-allowed; }
+.lang span[aria-current] { opacity: 1; color: var(--night); background: var(--gold); cursor: default; }
+.lang .hy { font-family: var(--arm); }
+.burger { display: none; background: none; border: 1px solid var(--gold-soft); color: var(--ivory); border-radius: 4px; padding: .45rem .7rem; font: 500 .85rem var(--text); cursor: pointer; }
+
+@media (max-width: 860px) {
+  .burger { display: block; }
+  .nav {
+    position: fixed; inset: 0; background: var(--night);
+    flex-direction: column; justify-content: center; gap: 2.5rem;
+    opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s;
+  }
+  .nav.open { opacity: 1; visibility: visible; }
+  .nav ul { flex-direction: column; align-items: center; gap: 1.4rem; }
+  .nav a { font-family: var(--display); font-size: 1.8rem; color: var(--ivory); }
+  .burger { position: relative; z-index: 60; }
+}
+
+/* ---------- hero : les projecteurs s'allument ---------- */
+.hero {
+  position: relative; min-height: 100svh;
+  display: flex; align-items: flex-end;
+  overflow: hidden; background: #000;
+}
+.hero-img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 58% 40%;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: radial-gradient(ellipse 60% 70% at 64% 36%, transparent var(--r), rgba(0,0,0,.55) calc(var(--r) + 28%), #000 calc(var(--r) + 60%));
+  animation: lights 2.2s cubic-bezier(.3,.1,.2,1) .25s both;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, var(--night) 0%, rgba(18,26,46,.75) 28%, transparent 60%);
+}
+@keyframes lights { from { --r: 0%; } to { --r: 34%; } }
+.hero-text {
+  position: relative; z-index: 2; width: 100%;
+  padding-bottom: clamp(3.5rem, 9vh, 6.5rem);
+  animation: rise 1.2s ease 1.6s both;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.hero h1 { font-size: clamp(3rem, 10vw, 8rem); line-height: .95; max-width: 9ch; }
+.hero .arm { font-family: var(--arm); color: var(--gold); font-size: clamp(1.2rem, 2.4vw, 1.9rem); margin: .9rem 0 1.4rem; letter-spacing: .02em; }
+.hero .role { color: var(--ivory-soft); font-size: clamp(1rem, 1.5vw, 1.15rem); max-width: 34ch; margin: 0 0 2rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font: 600 .95rem var(--text); text-decoration: none;
+  padding: .85rem 1.4rem; border-radius: 3px; border: 1px solid var(--gold);
+  color: var(--night); background: var(--gold); cursor: pointer;
+}
+.btn:hover { background: #D6B272; }
+.btn.ghost { background: transparent; color: var(--ivory); border-color: var(--gold-soft); }
+.btn.ghost:hover { border-color: var(--gold); }
+.actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero::before { animation: none; --r: 34%; }
+  .hero-text { animation: none; }
+}
+
+/* ---------- sections ---------- */
+section { padding: clamp(4.5rem, 10vw, 8rem) 0; }
+.lede { color: var(--ivory-soft); max-width: 58ch; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 1rem 2rem; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+
+.ornament { display: flex; align-items: center; gap: 1.2rem; color: var(--gold); padding: 0 var(--gutter); max-width: var(--max); margin: 0 auto; }
+.ornament::before, .ornament::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--gold-soft)); }
+.ornament::after { background: linear-gradient(to left, transparent, var(--gold-soft)); }
+.ornament svg { width: 64px; height: 64px; flex: none; }
+
+/* bio */
+.bio-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.bio-photo { position: sticky; top: 6rem; }
+.bio-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 30%; filter: grayscale(1) contrast(1.05); }
+.bio-photo figcaption { font-size: .8rem; color: var(--ivory-soft); margin-top: .6rem; }
+.quote { font-family: var(--display); font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.3; margin: 0 0 2.5rem; color: var(--ivory); }
+.quote footer { font: 400 .9rem var(--text); color: var(--gold); margin-top: 1rem; }
+.bio-text p { max-width: 62ch; }
+.facts { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 2rem; border-top: 1px solid var(--gold-soft); padding-top: 2rem; }
+.facts dt, .facts strong { font-family: var(--display); font-size: 1.15rem; font-weight: 400; display: block; color: var(--gold); margin-bottom: .2rem; }
+.facts li { font-size: .95rem; color: var(--ivory-soft); }
+
+/* concerts */
+.concerts { background: var(--curtain); }
+.gig-list { list-style: none; margin: 0; padding: 0; }
+.gig {
+  display: grid; grid-template-columns: 8.5rem minmax(0, 1fr) auto; gap: .4rem 2rem;
+  align-items: baseline; padding: 1.5rem 0; border-top: 1px solid rgba(237, 230, 214, .12);
+}
+.gig:last-child { border-bottom: 1px solid rgba(237, 230, 214, .12); }
+.gig time { font-family: var(--display); font-size: 1.25rem; color: var(--gold); line-height: 1.2; }
+.gig time small { display: block; font: 400 .85rem var(--text); color: var(--ivory-soft); }
+.gig h3 { font-size: 1.3rem; margin-bottom: .25rem; }
+.gig p { margin: 0; color: var(--ivory-soft); font-size: .95rem; }
+.gig .gig-actions { display: flex; gap: .5rem; }
+.gig .btn { padding: .55rem 1rem; font-size: .85rem; }
+.past { margin-top: 3rem; }
+.past summary { cursor: pointer; font-family: var(--display); font-size: 1.3rem; list-style: none; display: inline-flex; align-items: center; gap: .7rem; }
+.past summary::-webkit-details-marker { display: none; }
+.past summary::before { content: '+'; color: var(--gold); font-family: var(--text); font-size: 1.4rem; width: 1rem; transition: transform .2s; }
+.past[open] summary::before { content: '–'; }
+.past .gig { grid-template-columns: 8.5rem minmax(0, 1fr); opacity: .9; }
+.past .gig-list { margin-top: 1.5rem; }
+
+/* programme */
+.prog-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.prog-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.programme {
+  border: 1px solid var(--gold-soft); padding: clamp(1.6rem, 4vw, 3.2rem);
+  background: linear-gradient(180deg, rgba(27,37,66,.6), rgba(18,26,46,.0));
+}
+.programme .kicker { color: var(--gold); font-size: .95rem; margin-bottom: .8rem; }
+.programme h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); margin-bottom: .4rem; }
+.programme .sub { font-family: var(--display); color: var(--ivory-soft); font-size: 1.15rem; margin-bottom: 2rem; }
+.works { list-style: none; margin: 0 0 2rem; padding: 0; }
+.works li { display: grid; grid-template-columns: 11.5rem minmax(0, 1fr); gap: 1rem; padding: .7rem 0; border-bottom: 1px dotted rgba(200, 161, 90, .3); }
+.works .who { font-family: var(--display); color: var(--gold); font-size: 1.05rem; }
+.works .what { font-style: italic; }
+.works .what span { display: block; }
+.programme .note { color: var(--ivory-soft); font-size: .95rem; margin: 0 0 1.6rem; }
+
+/* projets */
+.projets { background: var(--curtain); }
+.proj-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(1.2rem, 2.5vw, 2rem); }
+.proj { margin: 0; }
+.proj img { width: 100%; object-fit: cover; }
+.proj h3 { margin: 1rem 0 .4rem; }
+.proj p { color: var(--ivory-soft); font-size: .95rem; max-width: 52ch; margin: 0; }
+.proj.lead { grid-column: 1 / span 7; grid-row: span 2; }
+.proj.lead img { aspect-ratio: 5/4; }
+.proj.side { grid-column: 8 / span 5; }
+.proj.side img { aspect-ratio: 3/2; }
+.proj.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.2rem, 3vw, 2.5rem); align-items: center; margin-top: 1.5rem; }
+.proj.wide img { aspect-ratio: 16/10; }
+.proj.wide h3 { margin-top: 0; }
+.fortepiano { margin-top: clamp(3rem, 6vw, 5rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr); gap: clamp(1rem, 2.5vw, 2rem); align-items: end; }
+.fortepiano img { aspect-ratio: 3/4; object-fit: cover; width: 100%; }
+.fortepiano h3 { margin-bottom: .6rem; }
+.fortepiano p { color: var(--ivory-soft); max-width: 46ch; margin: 0; }
+
+/* écouter */
+.video {
+  position: relative; display: block; width: 100%; aspect-ratio: 16/9; padding: 0; border: 0;
+  background: #000 center/cover no-repeat; cursor: pointer; overflow: hidden; font: inherit; color: inherit;
+}
+.video::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,26,46,.85), rgba(18,26,46,.1) 55%); }
+.video .play {
+  position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: clamp(64px, 9vw, 96px); aspect-ratio: 1; border-radius: 50%;
+  border: 1px solid var(--gold); background: rgba(18,26,46,.55); display: grid; place-items: center;
+  transition: background .2s;
+}
+.video:hover .play, .video:focus-visible .play { background: var(--gold); }
+.video:hover .play svg, .video:focus-visible .play svg { fill: var(--night); }
+.video .play svg { width: 34%; fill: var(--gold); margin-left: 8%; }
+.video .cap { position: absolute; z-index: 2; left: clamp(1rem, 3vw, 2rem); bottom: clamp(.9rem, 2.5vw, 1.6rem); right: 1rem; text-align: left; color: var(--ivory); }
+.video .cap strong { font: 400 clamp(1.15rem, 2.2vw, 1.7rem)/1.2 var(--display); display: block; }
+.video .cap span { font-size: .88rem; color: var(--ivory-soft); }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 3; }
+.listen-more { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
+.disc { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+.disc img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.disc .nocover { aspect-ratio: 1; border: 1px solid var(--gold-soft); display: grid; place-items: center; font-family: var(--display); color: var(--gold); text-align: center; padding: .8rem; line-height: 1.2; }
+.disc h3 { font-size: 1.25rem; margin-bottom: .3rem; }
+.disc p { color: var(--ivory-soft); font-size: .93rem; margin: 0 0 .6rem; }
+.disc a { color: var(--gold); text-underline-offset: 3px; font-size: .93rem; }
+.small-video .video { aspect-ratio: 16/9; }
+
+/* contact */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 6rem); }
+form { display: grid; gap: 1.1rem; }
+label { font-size: .9rem; color: var(--ivory-soft); display: grid; gap: .4rem; }
+input, textarea {
+  font: inherit; color: var(--ivory); background: var(--curtain); border: 1px solid rgba(237,230,214,.18);
+  border-radius: 3px; padding: .8rem .9rem; width: 100%;
+}
+input:focus, textarea:focus { border-color: var(--gold); outline: none; box-shadow: 0 0 0 2px rgba(200,161,90,.35); }
+textarea { min-height: 9rem; resize: vertical; }
+.form-msg { min-height: 1.5em; color: var(--gold); margin: 0; }
+.socials { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: .9rem; }
+.socials a { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; font-size: 1.05rem; }
+.socials a:hover span { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--gold); }
+.socials svg { width: 22px; height: 22px; fill: var(--gold); flex: none; }
+
+/* footer */
+.foot { border-top: 1px solid rgba(237,230,214,.12); padding: 3rem 0 6rem; font-size: .85rem; color: var(--ivory-soft); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem; }
+.foot .name { font-family: var(--display); font-size: 1.4rem; color: var(--ivory); margin-bottom: .2rem; }
+.foot .name-hy { font-family: var(--arm); color: var(--gold); margin: 0 0 1rem; }
+.foot p { margin: 0 0 .5rem; }
+
+/* bandeau maquette */
+.mockbar {
+  position: fixed; left: 50%; bottom: .8rem; transform: translateX(-50%); z-index: 40;
+  display: flex; align-items: center; gap: .9rem; white-space: nowrap;
+  background: var(--ivory); color: var(--night); border-radius: 99px;
+  padding: .45rem .55rem .45rem 1rem; font-size: .82rem; box-shadow: 0 6px 24px rgba(0,0,0,.4);
+}
+.mockbar a { background: var(--night); color: var(--ivory); text-decoration: none; padding: .35rem .8rem; border-radius: 99px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 960px) {
+  .bio-grid, .prog-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .bio-photo { position: static; max-width: 30rem; }
+  .prog-photo { max-width: 26rem; }
+  .proj.lead, .proj.side { grid-column: 1 / -1; grid-row: auto; }
+  .proj.wide { grid-template-columns: minmax(0, 1fr); }
+  .fortepiano { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .fortepiano div { grid-column: 1 / -1; }
+  .listen-more { grid-template-columns: minmax(0, 1fr); }
+  .foot-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .hero { align-items: flex-end; }
+  .hero-img { object-position: 30% 30%; }
+  .hero::before { background: radial-gradient(ellipse 90% 55% at 55% 30%, transparent var(--r), rgba(0,0,0,.55) calc(var(--r) + 28%), #000 calc(var(--r) + 60%)); }
+  .gig { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
+  .past .gig { grid-template-columns: minmax(0, 1fr); }
+  .gig .gig-actions { margin-top: .6rem; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .works li { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+  .disc { grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; }
+  .mockbar { font-size: .78rem; gap: .6rem; }
+  .top .lang { display: none; }
+  .video .play { top: 38%; width: 56px; }
+  .video .cap span { display: none; }
+  .nav .lang { display: flex; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#bio">Aller au contenu</a>
+
+<header class="top" id="top">
+  <a class="brand" href="#accueil">Arman Grigorian</a>
+  <button class="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Navigation principale">
+    <ul>
+      <li><a href="#bio">Biographie</a></li>
+      <li><a href="#concerts">Concerts</a></li>
+      <li><a href="#programme">Récital</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#ecouter">Écouter</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Langue">
+      <span aria-current="true">FR</span>
+      <span aria-disabled="true" title="Bientôt disponible">EN</span>
+      <span class="hy" lang="hy" aria-disabled="true" title="Bientôt disponible">ՀԱՅ</span>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="accueil" aria-label="Accueil" style="padding:0">
+    <img class="hero-img" src="../assets/img/mains-partition.webp" width="1440" height="1152" alt="Arman Grigorian de dos au piano, la partition éclairée dans l'obscurité de la salle" fetchpriority="high">
+    <div class="wrap hero-text">
+      <h1>Arman Grigorian</h1>
+      <p class="arm" lang="hy">Արման Գրիգորյան</p>
+      <p class="role">Pianiste. Récitals, lied et musique de chambre, sur piano moderne et pianoforte. Vevey et Lausanne.</p>
+      <div class="actions">
+        <a class="btn" href="#concerts">Voir les concerts</a>
+        <a class="btn ghost" href="#ecouter">Écouter</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="bio">
+    <div class="wrap bio-grid">
+      <figure class="bio-photo" style="margin:0">
+        <img src="../assets/img/portrait-nb.webp" width="1080" height="1080" loading="lazy" alt="Portrait en noir et blanc d'Arman Grigorian, souriant">
+        <figcaption>Photo : Cyprien Colombo</figcaption>
+      </figure>
+      <div class="bio-text">
+        <h2 style="margin-bottom:2rem">Biographie</h2>
+        <blockquote class="quote">
+          « Le concert, cet espace de privilège entre un artiste et son public où l'on peut exprimer l'ineffable. »
+          <footer>Arman Grigorian</footer>
+        </blockquote>
+        <p>Né en Arménie dans une famille de musiciens, Arman Grigorian grandit au son de la musique traditionnelle arménienne et commence le piano à huit ans. Il s'installe ensuite en France, où il obtient au Conservatoire de Strasbourg son diplôme de piano et un prix de musique de chambre, dans les classes de Lara Erbès et d'Aline Zylberach. Il y suit en parallèle une licence d'anglais.</p>
+        <p>À la Haute école de musique de Lausanne, dans la classe de Pierre Goy, il obtient un Bachelor puis un Master de pédagogie, et découvre les claviers historiques. Il complète sa formation par un Master d'interprétation à la Haute école des arts de Berne, auprès de Patricia Pagny. Il a travaillé avec Leon Fleisher, Abdel Rahman El-Bacha, François-René Duchâble et Janina Fialkowska, et s'est formé à l'interprétation historique avec Edoardo Torbianelli, Piet Kuijken et Clive Brown.</p>
+        <p>Lauréat de la Fondation Royaumont, il s'est produit aux Rencontres musicales d'Évian, à Cully Classique, au FIMU de Belfort, au Festival de piano de Genève, à la Schubertiade de Sion et au Rhonefestival de Brigue. Liszt, les Schumann, Schubert et Ravel sont au cœur de son répertoire, qu'il joue aussi sur un pianoforte viennois de 1827.</p>
+        <ul class="facts">
+          <li><strong>Enseignement</strong>Professeur de piano au Conservatoire de Montreux-Vevey-Riviera</li>
+          <li><strong>Pianos historiques</strong>Chargé de communication des Rencontres harmoniques de Lausanne</li>
+          <li><strong>Formation</strong>Conservatoire de Strasbourg, HEMU Lausanne, HKB Berne</li>
+          <li><strong>Distinction</strong>Lauréat de la Fondation Royaumont, 2019</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4">
+      <path d="M32 6c7 0 10 6 10 12s-4 10-10 14c-6-4-10-8-10-14S25 6 32 6Z"/>
+      <path d="M32 58c-7 0-10-6-10-12s4-10 10-14c6 4 10 8 10 14s-3 12-10 12Z"/>
+      <path d="M6 32c0-7 6-10 12-10s10 4 14 10c-4 6-8 10-14 10S6 39 6 32Z"/>
+      <path d="M58 32c0 7-6 10-12 10s-10-4-14-10c4-6 8-10 14-10s12 3 12 10Z"/>
+      <circle cx="32" cy="32" r="3.2" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
+
+  <section class="concerts" id="concerts">
+    <div class="wrap">
+      <div class="head">
+        <h2>Concerts</h2>
+        <p class="lede" style="margin:0">Saison 2026–2027 en Suisse romande. <span class="tag">exemple</span></p>
+      </div>
+      <ul class="gig-list">
+        <li class="gig">
+          <time datetime="2026-12-12T19:30">12 décembre<small>samedi, 19 h 30</small></time>
+          <div><h3>Cloches : harmonies célestes <span class="tag">exemple</span></h3><p>Récital de piano. Temple de Lutry</p></div>
+          <div class="gig-actions"><a class="btn ghost" href="#programme">Détails</a><a class="btn" href="#">Réserver</a></div>
+        </li>
+        <li class="gig">
+          <time datetime="2027-01-24T17:00">24 janvier<small>dimanche, 17 h</small></time>
+          <div><h3>Carnets lyriques <span class="tag">exemple</span></h3><p>Avec Narek Hekekyan, violoncelle. La Goulue, St-Légier</p></div>
+          <div class="gig-actions"><a class="btn ghost" href="#projets">Détails</a><a class="btn" href="#">Réserver</a></div>
+        </li>
+        <li class="gig">
+          <time datetime="2027-03-19T20:00">19 mars<small>vendredi, 20 h</small></time>
+          <div><h3>Schubert au pianoforte <span class="tag">exemple</span></h3><p>Avec Tristan Blanchet, ténor, sur le Schrimpf de 1827. Salle del Castillo, Vevey</p></div>
+          <div class="gig-actions"><a class="btn ghost" href="#projets">Détails</a><a class="btn" href="#">Réserver</a></div>
+        </li>
+        <li class="gig">
+          <time datetime="2027-05-09T17:00">9 mai<small>dimanche, 17 h</small></time>
+          <div><h3>La Folia d'Allegria <span class="tag">exemple</span></h3><p>Musique baroque d'Espagne, de France et d'Italie. Église Saint-François, Lausanne</p></div>
+          <div class="gig-actions"><a class="btn ghost" href="#projets">Détails</a><a class="btn" href="#">Réserver</a></div>
+        </li>
+      </ul>
+
+      <details class="past">
+        <summary>Concerts passés</summary>
+        <ul class="gig-list">
+          <li class="gig"><time datetime="2026-10-25">25 octobre 2026<small>dimanche, 17 h</small></time><div><h3>La Folia d'Allegria</h3><p>Concerts Musique et Parole. Église romane de Saint-Sulpice</p></div></li>
+          <li class="gig"><time datetime="2026-04-26">26 avril 2026<small>dimanche, 17 h 30</small></time><div><h3>La Folia d'Allegria</h3><p>Monteverdi, Storace, Falconieri, Sanz, Charpentier. Église de Saint-Saphorin</p></div></li>
+          <li class="gig"><time datetime="2026-04-10">10 avril 2026<small>vendredi, 16 h 30</small></time><div><h3>Duo avec Rachel Kolly</h3><p>Clara Schumann, Mel Bonis, Nadia Boulanger. Maison de la Femme, Lausanne</p></div></li>
+          <li class="gig"><time datetime="2026-03">Mars 2026</time><div><h3>Carnets lyriques</h3><p>Premier concert, avec Narek Hekekyan. La Goulue, St-Légier</p></div></li>
+          <li class="gig"><time datetime="2026-03-01">1er mars 2026<small>dimanche, 11 h</small></time><div><h3>Liszt et Niedermeyer</h3><p>Avec Tristan Blanchet : Sonnets de Pétrarque, Romances sur Lamartine. Hôtel de ville de Belfort</p></div></li>
+          <li class="gig"><time datetime="2025-12-05">5 décembre 2025<small>vendredi, 20 h</small></time><div><h3>La Folia d'Allegria</h3><p>Caveau de Paudex</p></div></li>
+          <li class="gig"><time datetime="2025-12">Décembre 2025</time><div><h3>Concert de Noël avec Rachel Kolly</h3><p>Hôtel Engadinerhof, Pontresina</p></div></li>
+          <li class="gig"><time datetime="2025-09">Septembre 2025</time><div><h3>La Folia d'Allegria</h3><p>Concerts du Cœur. Château de la Rive, Lutry</p></div></li>
+          <li class="gig"><time datetime="2025-07-19">19 juillet 2025<small>samedi, 17 h</small></time><div><h3>Alpenjäger</h3><p>Avec Tristan Blanchet, Rhonefestival. Château Stockalper, Brigue</p></div></li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <section id="programme">
+    <div class="wrap prog-grid">
+      <figure class="prog-photo" style="margin:0">
+        <img src="../assets/img/cloche.webp" width="960" height="1200" loading="lazy" alt="Cloche ancienne en bronze, éclairée d'une lumière chaude">
+      </figure>
+      <article class="programme">
+        <p class="kicker">Récital de piano, environ 50 minutes</p>
+        <h2>Cloches : harmonies célestes</h2>
+        <p class="sub">L'héritage mystique de Liszt</p>
+        <ul class="works">
+          <li><span class="who">Franz Liszt</span><span class="what"><span>La chapelle de Guillaume Tell</span><span>Funérailles</span><span>Les cloches de Genève</span></span></li>
+          <li><span class="who">Claude Debussy</span><span class="what">La cathédrale engloutie</span></li>
+          <li><span class="who">Olivier Messiaen</span><span class="what">Cloches d'angoisse et larmes d'adieu</span></li>
+          <li><span class="who">Tristan Murail</span><span class="what">Cloches d'adieu, et un sourire</span></li>
+          <li><span class="who">Sergueï Rachmaninov</span><span class="what">Prélude en ut dièse mineur, op. 3 no 2</span></li>
+          <li><span class="who">Maurice Ravel</span><span class="what">La vallée des cloches</span></li>
+        </ul>
+        <p class="note">Des carillons de Liszt aux résonances de Messiaen et Murail : un siècle et demi de pianistes qui écoutent sonner les cloches. Programme proposé aux saisons et festivals.</p>
+        <a class="btn ghost" href="#contact">Inviter ce récital</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="projets" id="projets">
+    <div class="wrap">
+      <div class="head"><h2>Projets</h2><p class="lede" style="margin:0">Quatre formations, du baroque au lied romantique.</p></div>
+      <div class="proj-grid">
+        <figure class="proj lead">
+          <img src="../assets/img/carnets-lyriques-2.webp" width="1200" height="960" loading="lazy" alt="Arman Grigorian au piano et Narek Hekekyan au violoncelle, en concert">
+          <figcaption>
+            <h3>Carnets lyriques</h3>
+            <p>Duo avec le violoncelliste Narek Hekekyan. Un programme qui mêle des musiques d'Arménie, de Russie, de France et d'Espagne, dans l'esprit des salons du XIXe siècle. Premier concert en mars 2026 à La Goulue.</p>
+          </figcaption>
+        </figure>
+        <figure class="proj side">
+          <img src="../assets/img/temple-blanchet.webp" width="1200" height="1200" loading="lazy" alt="Arman Grigorian et le ténor Tristan Blanchet saluent dans un temple">
+          <figcaption>
+            <h3>Avec Tristan Blanchet</h3>
+            <p>Duo piano et ténor : les Sonnets de Pétrarque de Liszt, « Nostalgies alpestres », « Alpenjäger », et le concert-lecture « Proust au salon ».</p>
+          </figcaption>
+        </figure>
+        <figure class="proj side">
+          <img src="../assets/img/duo-kolly.webp" width="1200" height="960" loading="lazy" alt="La violoniste Rachel Kolly et Arman Grigorian en concert">
+          <figcaption>
+            <h3>Avec Rachel Kolly</h3>
+            <p>Duo violon et piano consacré aux compositrices : Clara Schumann, Mel Bonis, Nadia Boulanger.</p>
+          </figcaption>
+        </figure>
+        <figure class="proj wide">
+          <img src="../assets/img/folia-groupe.webp" width="1200" height="904" loading="lazy" alt="Les musiciens de La Folia d'Allegria après un concert">
+          <figcaption>
+            <h3>La Folia d'Allegria</h3>
+            <p>Ensemble baroque où Arman tient l'épinette, avec Sofia Rauss (soprano), Albanie Bauer (flûte à bec), Jordan Gregoris (violoncelle baroque) et Antony Corbière (archiluth et guitare baroque). Musiques d'Espagne, de France et d'Italie du XVIIe siècle.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="fortepiano">
+        <img src="../assets/img/schrimpf-1827.webp" width="900" height="1200" loading="lazy" alt="Détail du pianoforte Joseph Schrimpf, Vienne 1827">
+        <img src="../assets/img/schrimpf-jeu.webp" width="900" height="1200" loading="lazy" alt="Arman Grigorian joue le pianoforte Schrimpf dans l'atelier de Christopher Clarke">
+        <div>
+          <h3>Un pianoforte de Vienne, 1827</h3>
+          <p>Depuis novembre 2025, Arman joue un instrument de Joseph Schrimpf restauré par Christopher Clarke. Cinq pédales, dont celle « des janissaires » qui intrigue toujours le public : de quoi entendre Schubert et Beethoven avec les couleurs de leur temps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecouter">
+    <div class="wrap">
+      <div class="head"><h2>Écouter</h2><p class="lede" style="margin:0">Vidéos et enregistrements.</p></div>
+      <button class="video" data-yt="dUF9ZdvejlY" style="background-image:url('https://i.ytimg.com/vi/dUF9ZdvejlY/hqdefault.jpg')" aria-label="Lire la vidéo : Clara Schumann, Variations op. 20">
+        <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></span>
+        <span class="cap"><strong>Clara Schumann, Variations op. 20</strong><span>Variations sur un thème de Robert Schumann. Vidéo de Karin Antonietti</span></span>
+      </button>
+
+      <div class="listen-more">
+        <div>
+          <div class="disc">
+            <img src="../assets/img/cd-clara-schumann.webp" width="1026" height="1026" loading="lazy" alt="Pochette du disque Clara Schumann, Leidenschaft und Hingabe">
+            <div>
+              <h3>Clara Schumann : Leidenschaft &amp; Hingabe</h3>
+              <p>Tasti'Era Projects, 2020. Variations sur un thème de Robert Schumann, op. 20.</p>
+              <a href="https://tastieraprojects.com/discography/leidenschaft-hingabe/" rel="noopener" target="_blank">Voir le disque</a>
+            </div>
+          </div>
+          <div class="disc" style="margin-top:1.8rem">
+            <div class="nocover" aria-hidden="true">Viva piano, viva forte</div>
+            <div>
+              <h3>Viva piano, viva forte</h3>
+              <p>Tasti'Era Projects, 2017. Ravel, Oiseaux tristes.</p>
+              <a href="https://tastieraprojects.com/discography/viva-piano-viva-forte/" rel="noopener" target="_blank">Voir le disque</a>
+            </div>
+          </div>
+        </div>
+        <div class="small-video">
+          <button class="video" data-yt="PsLQmuhC5u8" style="background-image:url('https://i.ytimg.com/vi/PsLQmuhC5u8/hqdefault.jpg')" aria-label="Lire la vidéo : Le piano ravélien, un apprentissage par la copie">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg></span>
+            <span class="cap"><strong>Le piano ravélien</strong><span>Un apprentissage par la copie. HEM Genève</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4">
+      <path d="M32 6c7 0 10 6 10 12s-4 10-10 14c-6-4-10-8-10-14S25 6 32 6Z"/>
+      <path d="M32 58c-7 0-10-6-10-12s4-10 10-14c6 4 10 8 10 14s-3 12-10 12Z"/>
+      <path d="M6 32c0-7 6-10 12-10s10 4 14 10c-4 6-8 10-14 10S6 39 6 32Z"/>
+      <path d="M58 32c0 7-6 10-12 10s-10-4-14-10c4-6 8-10 14-10s12 3 12 10Z"/>
+      <circle cx="32" cy="32" r="3.2" fill="#8E2A36" stroke="none"/>
+    </svg>
+  </div>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 style="margin-bottom:1.2rem">Contact</h2>
+        <p class="lede">Pour un concert, un récital ou des cours de piano, écrivez à Arman Grigorian.</p>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/arman.grigorian.pianist/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 2.2c-2.7 0-3 0-4 .1-3.6.2-5.6 2.2-5.8 5.8-.1 1-.1 1.3-.1 4s0 3 .1 4c.2 3.6 2.2 5.6 5.8 5.8 1 .1 1.3.1 4 .1s3 0 4-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1 .1-1.3.1-4s0-3-.1-4c-.2-3.6-2.2-5.6-5.8-5.8-1-.1-1.3-.1-4-.1zm0 1.8c2.6 0 2.9 0 3.9.1 2.6.1 3.9 1.4 4 4 .1 1 .1 1.3.1 3.9s0 2.9-.1 3.9c-.1 2.6-1.4 3.9-4 4-1 .1-1.3.1-3.9.1s-2.9 0-3.9-.1c-2.6-.1-3.9-1.4-4-4-.1-1-.1-1.3-.1-3.9s0-2.9.1-3.9c.1-2.6 1.4-3.9 4-4 1-.1 1.3-.1 3.9-.1z"/></svg><span>Instagram</span></a></li>
+          <li><a href="https://www.facebook.com/Arman.Grigorian.Pianist" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7C5.6 21.2 2 17 2 12 2 6.5 6.5 2 12 2s10 4.5 10 10c0 5-3.6 9.2-8.5 9.9z"/></svg><span>Facebook</span></a></li>
+          <li><a href="https://www.youtube.com/user/armpiano" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 00-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 001 7.2 31 31 0 00.5 12 31 31 0 001 16.8a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1 31 31 0 00.5-4.8 31 31 0 00-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg><span>YouTube</span></a></li>
+        </ul>
+      </div>
+      <form id="form" novalidate>
+        <label>Nom<input name="nom" autocomplete="name" required></label>
+        <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <div><button class="btn" type="submit">Envoyer le message</button></div>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="name">Arman Grigorian</p>
+      <p class="name-hy" lang="hy">Արման Գրիգորյան</p>
+      <p>Pianiste, Vevey et Lausanne</p>
+    </div>
+    <div>
+      <p>Photos : Cyprien Colombo (portrait, scène au piano, temple), Anna Apresyan (Carnets lyriques), milesfp (duo avec Rachel Kolly), J.-P. Iracane (La Folia d'Allegria), Arman Grigorian (cloche, pianoforte), Tasti'Era Projects (pochette).</p>
+      <p>Maquette de démonstration. Les éléments marqués « exemple » sont fictifs.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mockbar">Maquette 3 sur 3 <a href="../">Voir les 3 maquettes</a></div>
+
+<script>
+(() => {
+  const top = document.getElementById('top');
+  const onScroll = () => top.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const burger = document.querySelector('.burger'), nav = document.getElementById('nav');
+  const setNav = open => { nav.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); burger.textContent = open ? 'Fermer' : 'Menu'; document.body.style.overflow = open ? 'hidden' : ''; };
+  burger.addEventListener('click', () => setNav(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setNav(false); });
+
+  document.querySelectorAll('.video[data-yt]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.yt === 'dUF9ZdvejlY') { window.open('https://www.youtube.com/watch?v=dUF9ZdvejlY', '_blank', 'noopener'); return; }
+    const f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.yt + '?autoplay=1';
+    f.title = b.getAttribute('aria-label').replace('Lire la vidéo : ', '');
+    f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+    const box = document.createElement('div'); box.className = 'video'; box.appendChild(f);
+    b.replaceWith(box); f.focus();
+  }));
+
+  document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    e.target.querySelector('.form-msg').textContent = "Démonstration : ce message n'a pas été envoyé.";
+  });
+})();
+</script>
+</body>
+</html>
