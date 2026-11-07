@@ -115,6 +115,7 @@ section{padding:clamp(64px,9vw,128px) 0}
 .gig .day{font-family:var(--cond);font-stretch:62%;font-weight:800;color:var(--vin);line-height:.8}
 .gig .day b{display:block;font-size:4.6rem}
 .gig .day i{display:block;font-style:normal;font-weight:600;font-stretch:85%;font-size:.95rem;color:var(--encre-douce);margin-top:6px}
+.gig .day.mois b{font-size:2.9rem;line-height:.95}
 .gig h3{color:var(--encre);font-size:clamp(1.35rem,2.2vw,1.75rem);margin-bottom:6px}
 .gig .meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.98rem;color:var(--encre-douce)}
 .gig .meta strong{font-weight:600;color:var(--encre)}
@@ -125,6 +126,7 @@ section{padding:clamp(64px,9vw,128px) 0}
 @media (max-width:760px){
   .gig{grid-template-columns:5.6rem minmax(0,1fr);gap:6px 14px;align-items:start}
   .gig .day b{font-size:3.4rem}
+  .gig .day.mois b{font-size:2.2rem}
   .gig .day i{font-size:.8rem;line-height:1.25}
   .gig .acts{grid-column:2}
 }
@@ -356,7 +358,7 @@ footer p{margin:0;max-width:60em}
           <div class="meta"><span><strong>Hôtel de ville</strong>, Belfort</span><span>Avec Tristan Blanchet, Vocalises de Belfort</span></div></div>
       </article>
       <article class="gig past">
-        <div class="day"><b>Mars</b><i>2026</i></div>
+        <div class="day mois"><b>Mars</b><i>2026</i></div>
         <div><h3>Carnets lyriques, premier concert</h3>
           <div class="meta"><span><strong>La Goulue</strong>, St-Légier</span><span>Avec Narek Hekekyan, violoncelle</span></div></div>
       </article>
@@ -367,13 +369,13 @@ footer p{margin:0;max-width:60em}
           <div class="meta"><span><strong>Caveau de Paudex</strong>, Paudex</span><span>Musique baroque d'Espagne, de France et d'Italie</span></div></div>
       </article>
       <article class="gig past">
-        <div class="day"><b>Déc.</b><i>2025</i></div>
+        <div class="day mois"><b>Déc.</b><i>2025</i></div>
         <div><h3>Concert de Noël avec Rachel Kolly</h3>
           <div class="meta"><span><strong>Hôtel Engadinerhof</strong>, Pontresina</span><span>Violon et piano</span></div></div>
       </article>
       <h3 class="month">Septembre 2025</h3>
       <article class="gig past">
-        <div class="day"><b>Sept.</b><i>2025</i></div>
+        <div class="day mois"><b>Sept.</b><i>2025</i></div>
         <div><h3>La Folia d'Allegria</h3>
           <div class="meta"><span><strong>Château de la Rive</strong>, Lutry</span><span>Concerts du Cœur</span></div></div>
       </article>
